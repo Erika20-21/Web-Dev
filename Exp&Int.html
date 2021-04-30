@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app='MSGApp'>
+<head>
+<meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+<script src="app.js"></script>
+<style> body  { font-size: 1.2em:} </style>
+<title> Expressions and Interpolation</title>
+</head>
+<body>
+<h1>Expressions and Interpolation</h1>
+<div ng-controller='MSGController'>
+{{name}}'s Message:<br>
+{{sayIt()}}
+<div>
+ <button ng-click="prog()"> See Progress</button><br>
+ <img ng-src="images/Mina_{{progress}}.png">
+</div>
+</div> 
+</body>
+</html>
