@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="">
+<head>
+	<title>Angular.JS</title>
+	<h1> Programming Activity # 1</h1>
+	<meta charset="utf-8" />
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js" type="text/javascript"></script>
+</head>
+<body>
+	<div>Enter Your Name: <input type="text" ng-model="name"></div>
+	<div>Your Name is:  {{name}}</div><br />
+
+	<div>Enter Your Address: <input type="text" ng-model="add"></div>
+	<div>Your Address is:  {{add}}</div><br />
+
+	<div>Enter Your SHS High School: <input type="text" ng-model="shs"></div>
+	<div>Your SHS High School is:  {{shs}}</div><br />
+
+	<div>Enter Your Course: <input type="text" ng-model="course"></div>
+	<div>Your Course is:  {{course}}</div><br />
+
+<div ng-app = "" ng-init = "subjects = [{field:'Science', name:'Mathematics', desc:'Science of Numbers'}, {field:'Science', name:'Bioinformatics', desc:'Subdiscipline of Computer Science and Biology'},
+ {field:'Science', name:'Geoscience', desc:'Study of the Earth'}, {field:'Science', name:'Oceanography', desc:'Study of all aspects of the ocean'},
+{field:'Science', name:'Meteorology', desc:'Study of the atmosphere of the Earth'}, {field:'Science', name:'Zoology', desc:'Branch of biology that studies the animal kingdom'},
+{field:'Science', name:'Biology', desc:'Study of the life and living organisms'}, {field:'Science', name:'Chemistry ', desc:'Study of composition, structure and properties of matter'},       
+{field:'Science', name:'Physics ', desc:'Deals with the structure of matter and how the fundamental constituents of the universe interact'},   
+{field:'Science', name:'Microbiology ', desc:'Study of microscopic organisms'},   
+]">
+         
+<div>
+	<p>Branches of Science:</p>
+   
+   <ol>
+       <li ng-repeat = "s in subjects">
+               {{ 'Field: ' + s.field + ', Name: ' + s.name + ', Description: ' + s.desc }}
+            </li>
+   </ol>
+        
+</div> 
+</body>
+</html>
